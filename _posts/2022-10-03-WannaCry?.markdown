@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "WannaCry? 😭"
+date:   2022-10-03 17:39:29 +0530
+categories: college
+---
+
+
+![Wannadecryptor](https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png)
+
+On the 12th of May, hospitals in the UK couldn't get access to their systems and were turning patients away,
+car factories in France had to shutdown and a Spanish telecommunications company told their employees to shut down their computers.
+
+The reason for these incidents was that computer systems globally were being infected by WannaCry, a ransomware attack which caused worldwide computer chaos.
+
+Before inspecting WannaCry, we'll start with...
+
+# What exactly is a Ransomware?
+In layman's terms, a ransomware is a kind of a computer virus/**malware** which an attacker discretely installs on victim's computer system to block access to victim's personal data by encrypting it. The attacker now asks for a sum of money/**ransom** to decrypt the victim's data.
+
+# How WannaCry works?
+There have been many ransomwares in the past but WannaCry spread quickly using an tool created by the NSA.
+This tool named EternalBlue exploited a vulnerability in the **S**erver **M**essage **B**lock or **SMB** protocol, commonly used to share file access across a network. It's used by lots of people all the time and the reason you've never heard of it is because it's
+generally safe. The NSA discovered that some versions of Windows the SMB protocol can be tricked into accepting packets of data from remote attackers.
+But EternalBlue was leaked by a hacker group named "The Shadow Brokers" and published it online to the public.
+Microsoft quickly fixed the vulnerability and released patches for their supported operating systems.
+
+In theory that should've fixed the problem and with the patch EternalBlue would be useless, but not everyone installs patches and updates their systems regularly. This particularly hit hard to systems running Windows XP which Microsoft had stopped supporting years before.
+
+So unpatched computer systems globally were left with a Big hole in their security which WannaCry took advantage of.
+
+The attackers behind WannaCry used this to their advantage and WannaCry spread like wildfire. Once WannaCry was installed in a computer system, it encrypted all of the users data using RSA and AES algorithms. This rendered all of the user data useless without a decryption key. 
+WannaCry then would prompt the user to make a $300 Bitcoin payment to the given Bitcoin Wallet Address. 
+Once the user made the payment it promised to decrypt the user's data. (p.s It never decrypted the data)
+
+# Impact
+According to Europol, which estimates around 2,00,000 computer systems were infected across 150 countries.
+According to Kaspersky Lab, the four most affected countries were Russia, Ukraine, India and Taiwan.
+One of the largest organization struck by the attack was the National Health Service(NHS) in the UK.
+
+However, Marcus Hutchins a security researcher from the UK discovered that WannaCry had a major flaw, while inspecting the disassembled executable of stopped the attack by simply registering a web domain found in the code.
+
+It was then found out that WannaCry never really checked if the ransom was payed or not. The attackers would have to manually decrypt each system after payment.
+
+# Takeaways
+The world took a big hit but was spared quickly as the attack was brought down within 4 days.
+This attack could've been way worse if the kill switch hadn't been discovered.
+
+## Best Practices:
+
+- # Reguarly update your software and Operating Systems
+The main reason this attack spread and was so effective was due to the fact that many computer systems 
+around the world were running an unsupported or an unpatched operating system. So always update your computers.
+
+- # Keep a backup of crucial data
+Having a backup ensures no data is lost in case the data gets encrypted.
+
+- # Never pay a ransom
+Many reports suggest that the data was never decrypted even after the ransom was payed.
+So paying the ransom might not always garuntee that the data would be recovered.
+
+- # Consider Cloud Technologies
+Cloud Based Architectures are more difficult to exploit as Cloud service providers upgrade 
+and patch cloud systems automatically without the user having to worry about it. Also, they keep a 
+data checkpoint of previous versions of the systems.
